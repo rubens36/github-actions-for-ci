@@ -4,3 +4,6 @@ on: pull_request_review
 jobs:
   labelWhenApproved:
     runs-on: ubuntu-latest
+    strategy:
+        matrix:
+          node-version: [12.x, 14.x]
